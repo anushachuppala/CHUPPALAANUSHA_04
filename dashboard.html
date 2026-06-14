@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-file-lines"></i>
+          <h2>Resume Builder</h2>
+        </div>
+
+        <ul class="menu">
+          <li class="active">
+            <a href="#">
+              <i class="fa-solid fa-table-columns"></i>
+              Dashboard
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-regular fa-user"></i>
+              Personal Info
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-graduation-cap"></i>
+              Education
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-lightbulb"></i>
+              Skills
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-briefcase"></i>
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-award"></i>
+              Certifications
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-regular fa-eye"></i>
+              Preview Resume
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-download"></i>
+              Download PDF
+            </a>
+          </li>
+        </ul>
+
+        <div class="bottom-links">
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+          </a>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+
+      <main class="main-content">
+        <!-- TOP NAVBAR -->
+
+        <header class="topbar">
+          <div>
+            <h2>Dashboard</h2>
+          </div>
+
+          <div class="profile">
+            <span>Welcome, Anusha 👋</span>
+          </div>
+        </header>
+
+        <!-- WELCOME BANNER -->
+
+        <section class="welcome-card">
+          <div class="welcome-content">
+            <h1>Welcome Back, Anusha!</h1>
+
+            <p>
+              Let's build your professional resume and get ready for your dream
+              career.
+            </p>
+
+            <button>Preview Resume</button>
+          </div>
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
+            alt=""
+          />
+        </section>
+
+        <!-- RESUME SECTIONS -->
+
+        <section class="section-grid">
+          <div class="section-card">
+            <h3>Personal Information</h3>
+            <p>Add your basic details</p>
+            <span>Completed</span>
+          </div>
+
+          <div class="section-card">
+            <h3>Education</h3>
+            <p>Add academic details</p>
+            <span>Completed</span>
+          </div>
+
+          <div class="section-card">
+            <h3>Skills</h3>
+            <p>Add technical skills</p>
+            <span>Completed</span>
+          </div>
+
+          <div class="section-card">
+            <h3>Projects</h3>
+            <p>Add your projects</p>
+            <span>Completed</span>
+          </div>
+
+          <div class="section-card pending">
+            <h3>Certifications</h3>
+            <p>Add certificates</p>
+            <span>Pending</span>
+          </div>
+        </section>
+
+        <!-- QUICK STATS -->
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <h2>80%</h2>
+            <p>Profile Completion</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>3</h2>
+            <p>Total Projects</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>8</h2>
+            <p>Total Skills</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>2</h2>
+            <p>Certifications</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>
