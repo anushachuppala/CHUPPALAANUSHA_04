@@ -1,6 +1,4 @@
-// ================================
-// REGISTER
-// ================================
+// REGISTER //
 
 const registerForm = document.getElementById("registerForm");
 
@@ -60,9 +58,7 @@ if (registerForm) {
   });
 }
 
-// ================================
-// LOGIN
-// ================================
+// LOGIN //
 
 const loginForm = document.getElementById("loginForm");
 
