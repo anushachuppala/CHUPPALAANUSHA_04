@@ -1,3 +1,10 @@
+// Check if user is logged in
+const user = localStorage.getItem("loggedInUser");
+
+if (!user) {
+  window.location.href = "login.html";
+}
+
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 // Not logged in
@@ -12,15 +19,19 @@ if (username) {
   username.textContent = currentUser.fullName;
 }
 
-// Logout
+// Logout Function
 const logoutBtn = document.getElementById("logoutBtn");
 
-if (logoutBtn) {
-  logoutBtn.addEventListener("click", function () {
-    localStorage.removeItem("currentUser");
+logoutBtn.addEventListener("click", function (e) {
+  e.preventDefault();
 
-    alert("Logged Out Successfully");
+  const confirmLogout = confirm("Are you sure you want to logout?");
 
-    window.location.href = "index.html";
-  });
-}
+  if (confirmLogout) {
+    // Remove user session data
+    localStorage.removeItem("loggedInUser");
+
+    // Redirect to login page
+    window.location.href = "login.html";
+  }
+});
