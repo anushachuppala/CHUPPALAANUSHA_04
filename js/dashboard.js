@@ -1,37 +1,18 @@
-// Check if user is logged in
-const user = localStorage.getItem("loggedInUser");
+document.addEventListener("DOMContentLoaded", () => {
+  const logoutBtn = document.getElementById("logoutBtn");
 
-if (!user) {
-  window.location.href = "login.html";
-}
+  console.log("JS Loaded");
+  console.log(logoutBtn);
 
-const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
 
-// Not logged in
-if (!currentUser) {
-  window.location.href = "index.html";
-}
+      alert("Logout Clicked");
 
-// Show user name
-const username = document.getElementById("username");
+      localStorage.removeItem("loggedInUser");
 
-if (username) {
-  username.textContent = currentUser.fullName;
-}
-
-// Logout Function
-const logoutBtn = document.getElementById("logoutBtn");
-
-logoutBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const confirmLogout = confirm("Are you sure you want to logout?");
-
-  if (confirmLogout) {
-    // Remove user session data
-    localStorage.removeItem("loggedInUser");
-
-    // Redirect to login page
-    window.location.href = "login.html";
+      window.location.href = "index.html";
+    });
   }
 });
